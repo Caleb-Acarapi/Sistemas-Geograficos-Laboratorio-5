@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #001825;
+  color: #50ffc5;
+}
+.contenedor {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #001018;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 221, 255, 0.156);
+}
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+#mapa {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/* ── Panel de coordenadas ── */
+.panel {
+  margin-top: 24px;
+  background: #001e30;
+  border: 1px solid #00ddffd0;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #00ddff;
+}
+#lista-coords {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#lista-coords li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #003348;
+  font-size: 0.88rem;
+  display: flex;
+  justify-content: space-between;
+}
+#lista-coords li span.num {
+  color: #00ddff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#lista-coords li:last-child {
+  border-bottom: none;
+}
+#lista-coords:empty::before {
+  content: "Haz clic en el mapa para capturar coordenadas.";
+  color: #336677;
+  font-size: 0.85rem;
+  display: block;
+  padding: 8px 0;
+}
+
+/* ── Botones ── */
+.botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.botones button {
+  background: #003a50;
+  color: #50ffc5;
+  border: 1px solid #00ddff88;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+.botones button:hover {
+  background: #005070;
+  transform: translateY(-1px);
+}
+.botones button:active {
+  transform: translateY(0);
+}
+
+/* ── Mensaje de estado ── */
+#mensaje {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  min-height: 18px;
+  color: #00ddff;
+}
